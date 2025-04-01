@@ -5,7 +5,9 @@ import PaymentProcessing from "@/components/microfrontends/PaymentProcessing/Pay
 const CheckoutPage = () => {
   return (
     <Layout>
-      <PaymentProcessing />
+      <div className="animate-fade-in">
+        <PaymentProcessing />
+      </div>
     </Layout>
   );
 };

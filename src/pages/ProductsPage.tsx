@@ -5,7 +5,9 @@ import ProductCatalog from "@/components/microfrontends/ProductCatalog/ProductCa
 const ProductsPage = () => {
   return (
     <Layout>
-      <ProductCatalog />
+      <div className="animate-fade-in">
+        <ProductCatalog />
+      </div>
     </Layout>
   );
 };

@@ -89,3 +89,45 @@
 .micro-frontend-container {
   @apply bg-white rounded-lg shadow-sm p-4 md:p-6;
 }
+
+/* Enhanced styles for modern UI */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+.glass-effect {
+  @apply backdrop-blur-sm bg-white/90 border border-white/20;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-portal-primary to-purple-500 bg-clip-text text-transparent;
+}
+
+.btn-gradient {
+  @apply bg-gradient-to-r from-portal-primary to-purple-600 text-white hover:shadow-lg transition-all duration-300;
+}
+
+.hover-scale {
+  @apply transition-transform duration-200 hover:scale-105;
+}
+
+.card-gradient {
+  @apply bg-gradient-to-br from-white to-portal-muted;
+}
+
+.story-link {
+  @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+}
+
+/* Responsive layouts */
+.product-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+}
+
+.form-container {
+  @apply max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl;
+}
+
+.pulse {
+  @apply animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite];
+}
