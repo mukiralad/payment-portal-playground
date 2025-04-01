@@ -2,7 +2,9 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProfileForm from "./ProfileForm";
 import OrderHistory from "./OrderHistory";
-import { User, ShoppingBag, CreditCard, LogOut } from "lucide-react";
+import TransactionHistory from "./TransactionHistory";
+import MFASetup from "./MFASetup";
+import { User, ShoppingBag, CreditCard, LogOut, Shield, History } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -35,7 +37,7 @@ const UserAccount = () => {
       </div>
       
       <Tabs defaultValue="profile" className="space-y-6">
-        <TabsList className="grid w-full grid-cols-2 lg:w-auto lg:inline-flex">
+        <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:w-auto lg:inline-flex">
           <TabsTrigger value="profile" className="flex items-center">
             <User className="mr-2 h-4 w-4" />
             Profile
@@ -43,6 +45,14 @@ const UserAccount = () => {
           <TabsTrigger value="orders" className="flex items-center">
             <ShoppingBag className="mr-2 h-4 w-4" />
             Orders
+          </TabsTrigger>
+          <TabsTrigger value="billing" className="flex items-center">
+            <CreditCard className="mr-2 h-4 w-4" />
+            Billing
+          </TabsTrigger>
+          <TabsTrigger value="security" className="flex items-center">
+            <Shield className="mr-2 h-4 w-4" />
+            Security
           </TabsTrigger>
         </TabsList>
         
@@ -52,6 +62,14 @@ const UserAccount = () => {
         
         <TabsContent value="orders">
           <OrderHistory />
+        </TabsContent>
+        
+        <TabsContent value="billing" className="space-y-8">
+          <TransactionHistory />
+        </TabsContent>
+        
+        <TabsContent value="security" className="space-y-8">
+          <MFASetup />
         </TabsContent>
       </Tabs>
     </div>
