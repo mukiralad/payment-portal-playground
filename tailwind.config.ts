@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom payment portal colors
+				portal: {
+					primary: '#6E59A5',
+					secondary: '#F2FCE2',
+					accent: '#FEC6A1',
+					muted: '#F1F0FB',
+					background: '#FFFFFF',
+					card: '#F6F6F7',
+					border: '#E5DEFF',
 				}
 			},
 			borderRadius: {
